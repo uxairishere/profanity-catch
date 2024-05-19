@@ -1,5 +1,8 @@
 import { checkSeverity, getProfanityWordsList } from "./utils/functions";
 
+type DetectProfanity = {
+    text: string
+}
 class TrieNode {
     children: { [char: string]: TrieNode };
     isEndOfWord: boolean;
@@ -42,7 +45,7 @@ class Trie {
     }
 }
 
-const detectProfanity = async ({ text }: { text: string }) => {
+const detectProfanity = async ({ text }: DetectProfanity) => {
 
     const profanityTrie = new Trie();
 
