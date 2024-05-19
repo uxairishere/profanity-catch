@@ -1,5 +1,5 @@
 {
-  "name": "profanity-js",
+  "name": "profanity-catch",
   "version": "1.0.0",
   "description": "A typescript package to detect profanity.",
   "main": "dist/index.js",
@@ -9,9 +9,21 @@
     "prepublishOnly": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uxairishere/profanity-catch.git"
+  },
+  "keywords": [
+    "add",
+    "math",
+    "example"
+  ],
+  "author": "Uzair Abbas",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uxairishere/profanity-catch/issues"
+  },
+  "homepage": "https://github.com/uxairishere/profanity-catch#readme",
   "devDependencies": {
     "@types/node": "^20.12.12",
     "typescript": "^5.4.5"
