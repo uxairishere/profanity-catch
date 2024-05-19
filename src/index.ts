@@ -1,4 +1,4 @@
-import { checkSeverity, getProfanityWordsList } from "./utils/functions";
+import { ProfanityCSVColumns, checkSeverity, findProfanityData, getProfanityWordsList } from "./utils/functions";
 
 type DetectProfanity = {
     text: string

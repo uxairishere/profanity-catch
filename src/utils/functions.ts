@@ -11,7 +11,7 @@ interface ProfanityRow {
     [key: string]: string;
 }
 
-export const getProfanityWordsList = (filePath: string, columnName: string) => {
+function getProfanityWordsList (filePath: string, columnName: string) {
     return new Promise<string[]>((resolve, reject) => {
         // Array to store the elements from the specified column
         let columnArray: string[] = [];
@@ -48,7 +48,7 @@ export const getProfanityWordsList = (filePath: string, columnName: string) => {
 }
 
 
-export async function findProfanityData(filePath: string, searchTerms: string[], columnName: ProfanityCSVColumns) {
+async function findProfanityData(filePath: string, searchTerms: string[], columnName: ProfanityCSVColumns) {
     return new Promise((resolve, reject) => {
         // Set to store unique severity ratings
         const severityRatings = new Set();
@@ -75,7 +75,7 @@ export async function findProfanityData(filePath: string, searchTerms: string[],
 }
 
 // Function to check severity level
-export function checkSeverity(severitySet: Set<string>): string | undefined {
+function checkSeverity(severitySet: Set<string>): string | undefined {
     for (const severity of ['Severe', 'Strong', 'Mild']) {
         if (severitySet.has(severity)) {
             return severity;
@@ -83,3 +83,10 @@ export function checkSeverity(severitySet: Set<string>): string | undefined {
     }
     return;
 }
+
+export {
+    getProfanityWordsList,
+    findProfanityData,
+    checkSeverity,
+    ProfanityCSVColumns
+};
